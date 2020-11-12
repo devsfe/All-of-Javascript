@@ -1,0 +1,184 @@
+    /* === Estilizações Globais === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #E55C8A;
+}
+
+
+/* === Estilização === */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#todo {
+    background-color: #3C424A;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.task__title {
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 0.1ch;
+    color: #ededed;
+    text-align: center;
+}
+
+.search-form {
+    align-self: center;
+    width: 300px;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #b0b3b8;
+}
+
+#search-input {
+    border-radius: 20px;
+    text-indent: 40px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin-bottom: 1.25em;
+}
+
+input[type="text"],
+.task {
+    background-color: #343A40;   
+    color: #b0b3b8;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px 5px;
+}
+
+input[type = text]:focus {
+    box-shadow: 0 0 0 2px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
+
+::placeholder {
+    text-align: center;
+}
+
+.task {
+    padding: 10px 5px;
+    margin:0 0 1.25em 0;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: ease 0.2s;
+    text-indent: 0.625em;
+}
+
+.task-name {
+    color: #ededed;
+    font-family: sans-serif;
+}
+
+.task--delete.task {
+    transition: linear 0.2s;
+    opacity: 0;
+}
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.del-btn {
+    padding: 5px 10px;
+    background: #484F59;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #A3AAB7;
+}
+
+.del-btn:hover {
+    background: #272a2e;   
+    color: #c3cbd9;
+    transition: ease 0.2s;
+}
+
+#add-btn {
+    padding: 10px 5px;
+    cursor: pointer;  
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#add-btn:hover {
+    background: #b3b3b3;
+    transition: ease 0.2s;
+}
+
+.copy {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    font-size: 0.875rem;
+    color: #d1d1d1;
+}
+
+.github-icon,
+.github-link     {
+    color: #272a2e;
+}
+
+/* === Responsividade === */
+@media(max-width: 900px){
+    #todo {
+        padding: 20px;             
+    }
+}
+
+@media(max-width: 1100px) {
+    .copy {
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }    
+}
