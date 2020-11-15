@@ -3,6 +3,7 @@ var todo = document.getElementById('todo');
 var searchInput = document.getElementById('search-input');
 var form = document.getElementById('input-form');
 
+
 //Eventos
 addBtn.addEventListener('click', adicionarTarefa);
 
