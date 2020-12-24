@@ -6,14 +6,13 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #7d77ed;
 }
 
 h1 {
     text-align: center;
-    padding: 40px 0;
+    padding: 1.3em 0;
     color: black;
-    
 }
 
 .js {
@@ -24,46 +23,100 @@ h1 {
     width: 60%;
     height: auto;
     margin: 20px auto 0 auto;
-    padding: 0 40px;
+    padding: 0 2.5em;
     background-color: #f2f2f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 20px;
 }
 
-.container p {
+.paragraph {
     max-width: 80%;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 2.5em auto;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #121212;
     line-height: 1.9;
 }
 
-.name {
-    display: flex;
-    flex-direction: column;
+table {
+    background-color: #69d0b3;
+    width: 98%;
+    max-width: 60rem;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 3rem auto;
 }
 
-.content {
-    display: flex;
-    justify-content: space-evenly;
+th {
+    background-color: #ff0f5b;
+    color: #f7f7f7;
+    padding: 1.25em 1.563em;
+}
+
+td {
+    padding: 1.25em 1.563em;
+}
+
+td a {
+    color: #7d0a2e;
+    -webkit-transition: ease 0.2s;
+    -o-transition: ease 0.2s;
+    transition: ease 0.2s;
+    white-space: nowrap;
+}
+
+td a:hover {
+    color: #59041e;
+}
+
+.light-gray {
+    background-color: #d3d3d3;
+}
+
+.color-1 {
+    background-color: #84b6d1;
 }
 
 
-
-@media(max-width: 600px) {
+@media(max-width: 800px) {
 
     .container {
-        width: 95%;
+        width: 90%;
+        max-width: 100%;
+        padding: 0 0.313em;
     }
 
-    .container p {
-        max-width: 95%;
+    .paragraph {
+        max-width: 98%;
+        font-size: 1rem;   
     }
 
-    .content {
-        justify-content: space-between;    
+    td,
+    th {
+        padding: 0.75em 0.625em;
+        font-size: 0.875rem;
     }
 }
 
+@media(max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+
+    h1 {
+        padding: 1.25em 0;
+    }
+
+    .paragraph {
+        max-width: 90%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
